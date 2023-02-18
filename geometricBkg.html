@@ -1,0 +1,31 @@
+<html>
+    <body>
+        <canvas id="canvas"></canvas>
+        <script src="geometry.js"></script>
+    </body>
+    <style>
+        :root{
+            --bkgBlur: 0px;
+        }
+        canvas {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            animation: blur 0s;
+            filter: blur(var(--bkgBlur));
+            z-index: -100;
+            background-color: #000000;
+        }
+
+        @keyframes blur {
+            0% {
+                filter: blur(100px);
+            }
+            100% {
+                filter: blur(var(--bkgBlur));
+            }
+        }
+    </style>
+</html>
