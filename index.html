@@ -27,6 +27,11 @@
             </div>
             <div id="about" class="sectCont scrollArea">
                 <p>About</p>
+                <div class="sideBySidePanels">
+                    <div class="panel">
+                        
+                    </div>
+                </div>
 
 
                 <a href="#featured"><img src="arrow.png" class="arrowImg"></a>
@@ -57,6 +62,12 @@
         </div>
     </body>
     <style>
+        :root{
+            --background: #0d0e0e;
+            --foreground: #151616;
+            --accent: #517079;
+            --textColour: #ffffff;
+        }
         html{
             scroll-behavior: smooth;
             height: 100%;
@@ -68,15 +79,15 @@
             cursor: url("cursor.png") 8 8, auto;
         }
         body {
-            background-color: #000000;
-            color: #ffffff;
+            background-color: var(--background);
+            color: var(--textColour);
             height: 10vh;
         }
         .divBar{
-            color: #ffffff;
+            color: var(--textColour);
             width: 80vw;
             height: 1px;
-            top : 50%;
+            top : 0;
         }
         .footer{
             position: relative;
@@ -88,6 +99,14 @@
             flex-direction: column;
             justify-content: center;
             align-items: center;
+            margin-top: 85vh;
+        }
+        .footer p{
+            margin-left: 30vw;
+            margin-top: 20px;
+        }
+        .footer .arrowImg{
+            bottom: 0;
         }
         .arrowImg{
             position: absolute;
@@ -155,6 +174,18 @@
             z-index: 2;
             animation: slideDown 2s ease-in-out;
         }
+        .smallText{
+            top: 50%;
+            left: 50%;
+            width: 100%;
+            height: fit-content;
+            font-size: 1rem;
+            font-family: 'Roboto', sans-serif;
+            font-weight: 300;
+            text-align: left;
+            z-index: 2;
+            animation: slideDown 2s ease-in-out;
+        }
         iframe {
             position: absolute;
             top: 0;
@@ -170,7 +201,7 @@
             left: 0;
             width: 100%;
             height: 101%;
-            background: linear-gradient( 160deg,rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, .1) 40%, rgb(0, 0, 0) 70%);
+            background: linear-gradient( 160deg,rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 40%, var(--background) 70%);
             z-index: 1;
         }
 
