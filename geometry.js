@@ -5,11 +5,11 @@ let width = canvas.width;
 let height = canvas.height;
 
 let nodeCount = 75;
-const nodeVelocity = .5;
-let nodeConnectRadius = 240;
+const nodeVelocity = .3;
+let nodeConnectRadius = 100;
 const nodeClearPercent = 0.1;
-const nodeColor = '#ffffff';
-const backgroundColor = '#0c1b273f';
+const nodeColor = '#2c3b47';
+const backgroundColor = '#0c1b27ff';
 let nodePositions = [];
 let nodeVelocities = [];
 const canvasBorderExtra = 25;
@@ -84,11 +84,12 @@ function draw(){
     ctx.fillStyle = backgroundColor;
     ctx.fillRect(0, 0, width, height);
     ctx.strokeStyle = nodeColor;
-    ctx.lineWidth = 3;
+    ctx.lineWidth = 4;
     ctx.beginPath();
     for(let i = 0; i < nodeCount; i++){
         let nodes = getNodesInRadius(nodePositions[i][0], nodePositions[i][1], nodeConnectRadius);
         for(let j = 0; j < nodes.length; j++){
+
             ctx.moveTo(nodePositions[i][0], nodePositions[i][1]);
             ctx.lineTo(nodePositions[nodes[j][0]][0], nodePositions[nodes[j][0]][1]);
         }

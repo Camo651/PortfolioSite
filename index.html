@@ -1,13 +1,59 @@
+<!-- 
+    TODO:
+    - Add a splash screen with a geometric background
+    - Header with logo and navigation
+    - About me section
+    - Project showcase with images and descriptions
+    - Other projects section with links to other projects
+    - Contact me section with links to social media
+    - Footer with links to social media
+-->
 <!DOCTYPE html>
 <html>
     <head>
         <title>Matt Hagger</title>
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:100,300,400,500,700,900" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900" rel="stylesheet">
     </head>
     <body>
-        <div id="splash">
-            <div id="iFrameOverlay"></div>
-            <iframe src="geometricBkg.html" frameborder="0"></iframe>
-            <h1 class="text bigText ">Matt Hagger</h1>
+        <div class="scrollContainer">
+            <div id="splash" class="sectCont scrollArea">
+                <div id="iFrameOverlay"></div>
+                <iframe src="geometricBkg.html" frameborder="0"></iframe>
+                <div id="textCover">
+                    <h1 class="bigText">Matt Hagger</h1>
+                </div>
+                <a href="#about"><img src="arrow.png" class="arrowImg"></a>
+            </div>
+            <div id="about" class="sectCont scrollArea">
+                <p>About</p>
+
+
+                <a href="#featured"><img src="arrow.png" class="arrowImg"></a>
+            </div>
+            <div id="featured" class="sectCont scrollArea">
+                <p>Featured</p>
+
+
+                <a href="#projects"><img src="arrow.png" class="arrowImg"></a>
+            </div>
+            <div id="projects" class="sectCont scrollArea">
+                <p>Projects</p>
+
+
+                <a href="#contact"><img src="arrow.png" class="arrowImg"></a>
+            </div>
+            <div id="contact" class="sectCont scrollArea">
+                <p>Contact</p>
+
+                <div id="footer" class="footer">
+                    <hr class="divBar">
+                    <p class="smallText">© 2023 Matt Hagger</p>
+    
+                    <a href="#splash"><img src="arrow.png" class="arrowImg" style="transform: rotate(180deg);"></a>
+                </div>
+            </div>
+
         </div>
     </body>
     <style>
@@ -24,26 +70,90 @@
         body {
             background-color: #000000;
             color: #ffffff;
-            height: 100%;
+            height: 10vh;
         }
-        h1 {
+        .divBar{
+            color: #ffffff;
+            width: 80vw;
+            height: 1px;
+            top : 50%;
+        }
+        .footer{
+            position: relative;
+            width: 100%;
+            height: 10vh;
+            min-height: 100px;
+            bottom: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .arrowImg{
             position: absolute;
-            top: 50%;
+            bottom: 5vh;
             left: 50%;
-            transform: translate(-50%, -50%);
-            font-size: 5rem;
-            font-family: 'Roboto', sans-serif;
-            font-weight: 100;
-            text-align: center;
-            z-index: 2;
+            transform: translateX(-50%);
+            width: 50px;
+            height: 50px;
+            z-index: 3;
+            animation: verySlideDown 2s ease-in-out;
+            transition: all 0.2s ease-in-out;
         }
-        #splash{
+        .arrowImg:hover{
+            transform: translateX(-50%) scale(1.1);
+            transition: all 0.2s ease-in-out;
+        }
+        .arrowImg:active{
+            transform: translateX(-50%) scale(1.05);
+            opacity: 0.8;
+            transition: all 0.2s ease-in-out;
+        }
+        .sectCont{
+            position: relative;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            min-height: 100px;
+            display: flex;
+            flex-direction: column;
+        }
+        #textCover{
+            position: absolute;
+            top: 40%;
+            left: 0;
+            width: 100%;
+            height: 100px;
+            background-color: rgba(0, 0, 0, 0);
+            z-index: 2;
+            overflow: hidden;
+
+        }
+        .scrollContainer{
             position: absolute;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
-            z-index: 1;
+            overflow: auto;
+            scroll-snap-type: y mandatory;
+            transition: all 1s ease-in-out;
+        }
+        .scrollArea{
+            scroll-snap-align: center;
+            transition: all 1s ease-in-out;
+        }
+        .bigText{
+            top: 50%;
+            left: 50%;
+            width: 100%;
+            height: fit-content;
+            font-size: 5rem;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 200;
+            text-align: center;
+            z-index: 2;
+            animation: slideDown 2s ease-in-out;
         }
         iframe {
             position: absolute;
@@ -51,6 +161,8 @@
             left: 0;
             width: 100%;
             height: 100%;
+            filter: blur(8px);
+            animation: unBlur 2s ease-in-out;
         }
         #iFrameOverlay {
             position: absolute;
@@ -58,9 +170,45 @@
             left: 0;
             width: 100%;
             height: 101%;
-            background: linear-gradient( 170deg,rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, .1) 40%, rgb(0, 0, 0) 70%);
+            background: linear-gradient( 160deg,rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, .1) 40%, rgb(0, 0, 0) 70%);
             z-index: 1;
         }
 
+        @keyframes unBlur {
+            0% {
+                filter: blur(100px);
+            }
+            100% {
+                filter: blur(8px);
+            }
+        }
+        @keyframes slideDown {
+            0% {
+                transform: translateY(-110%);
+            }
+            100% {
+                transform: translateY(0);
+            }
+        }
+        @keyframes verySlideDown {
+            0% {
+                transform: translate(-50%,-210%);
+            }
+            100% {
+                transform: translate(-50%,0);
+            }
+        }
+
     </style>
+    <script>
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+
+            document.querySelector(this.getAttribute('href')).scrollIntoView({
+                behavior: 'smooth'
+            });
+        });
+    });
+    </script>
 </html>
