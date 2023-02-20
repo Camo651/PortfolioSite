@@ -1,0 +1,226 @@
+:root{
+    --background: #0d0e0eff;
+    --foreground: #151616;
+    --accent: #8bc5d4;
+    --textColour: #ffffff;
+}
+html{
+    scroll-behavior: smooth;
+    height: 100%;
+    scrollbar-color: var(--accent) var(--background);
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    cursor: url("images/cursor.png") 8 8, auto;
+
+}
+/* width */
+::-webkit-scrollbar {
+    width: 0px;
+  }
+  
+body {
+    background-color: var(--background);
+    color: var(--textColour);
+    height: 10vh;
+    transition: all 0.2s ease-in-out;
+    overflow: hidden;
+
+}
+.divBar{
+    color: var(--textColour);
+    width: 80vw;
+    height: 1px;
+    top : 0;
+}
+.footer{
+    position: relative;
+    width: 100%;
+    height: 10vh;
+    min-height: 100px;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.footer p{
+    margin-left: 30vw;
+    margin-top: 20px;
+}
+.footer .arrowImg{
+    bottom: 0;
+}
+.arrowImg{
+    position: absolute;
+    bottom: 5vh;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50px;
+    height: 50px;
+    z-index: 3;
+    animation: verySlideDown 2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+}
+.arrowImg:hover{
+    transform: translateX(-50%) scale(1.1);
+    transition: all 0.2s ease-in-out;
+}
+.arrowImg:active{
+    transform: translateX(-50%) scale(1.05);
+    opacity: 0.8;
+    transition: all 0.2s ease-in-out;
+}
+.sectCont{
+    position: relative;
+    width: 100vw;
+    height: 100%;
+    overflow: hidden;
+    min-height: 100px;
+    display: flex;
+    flex-direction: column;
+    background: var(--background);
+    padding-top: 20px;
+    align-items: center;
+}
+#textCover{
+    position: absolute;
+    top: 40%;
+    left: 0;
+    width: 100%;
+    height: 200px;
+    background-color: rgba(0, 0, 0, 0);
+    z-index: 2;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#textCover2{
+    position: absolute;
+    top: 60%;
+    left: 0;
+    width: 100%;
+    height: 200px;
+    font-size: small !important;
+    background-color: rgba(0, 0, 0, 0);
+    z-index: 2;
+    overflow: hidden;
+
+}
+.scrollContainer{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    /* scroll-snap-type: y mandatory; */
+    transition: all 1s ease-in-out;
+}
+.scrollArea{
+    scroll-snap-align: center;
+    transition: all 1s ease-in-out;
+    
+}
+iframe {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    filter: blur(8px);
+    animation: unBlur 2s ease-in-out;
+
+}
+#iFrameOverlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 101%;
+    background: linear-gradient( 170deg,rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 40%, var(--background) 70%);
+    z-index: 1;
+}
+
+.link{
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    transition: all 0.2s ease-in-out;
+    scale: 1;
+    text-align: center;
+}
+.link:hover{
+    color: #54cbf3;
+    transition: all 0.2s ease-in-out;
+    scale: 1.1;
+}
+.link:active{
+    color: #ffffff;
+    transition: all 0.2s ease-in-out;
+    scale: 1.2;
+}
+
+.noWrap{
+    flex-wrap: nowrap;
+}
+.noWrap .panel{
+    min-width: 0; 
+}
+.smallDiv{
+    position: relative;
+    width: 20vw;
+    z-index: 2;
+    margin: 10px;
+    animation: slideFromLeft 2s ease-in-out;
+}
+
+.subtitle{
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: fit-content;
+    font-size: 2rem;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    text-align: center;
+    z-index: 2;
+    animation: slideDown 2s ease-in-out;
+}
+
+.bigText{
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    font-size: 5rem;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 200;
+    text-align: center;
+    z-index: 2;
+    animation: slideDown 2s ease-in-out;
+    margin: 20px;
+
+}
+
+.smallText{
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: fit-content;
+    font-size: 2rem;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    text-align: left;
+    z-index: 2;
+    animation: slideDown 2s ease-in-out;
+}
+.socialIcons{
+    margin: 10vh 0;
+}
+

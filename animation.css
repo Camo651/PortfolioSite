@@ -1,0 +1,32 @@
+@keyframes unBlur {
+    0% {
+        filter: blur(100px);
+    }
+    100% {
+        filter: blur(8px);
+    }
+}
+@keyframes slideDown {
+    0% {
+        transform: translateY(-150%);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+@keyframes verySlideDown {
+    0% {
+        transform: translate(-50%,-210%);
+    }
+    100% {
+        transform: translate(-50%,0);
+    }
+}
+@keyframes slideFromLeft {
+    0% {
+        transform: translateX(-410%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
