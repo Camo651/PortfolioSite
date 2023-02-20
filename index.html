@@ -17,11 +17,22 @@
         <link rel="stylesheet" href="style.css">
         <link rel="stylesheet" href="animation.css">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
-    </head>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+     </head>
     <body>
+        <div id="themeToggle" data-theme="dark">
+            <span class="material-symbols-outlined" id="brightness">brightness_1</span>
+            <style>
+                #brightness {
+                    font-size: 1em;
+                    color: #fff;
+                }
+            </style>
+        </div>
         <div class="scrollContainer">
             <div id="splash" class="sectCont scrollArea">
                 <div id="iFrameOverlay"></div>
+                <div id="iFrameOverlayLight"></div>
                 <iframe src="geometricBkg.html" frameborder="0"></iframe>
                 <div id="textCover">
                     <h1 class="bigText">Matt Hagger</h1>
@@ -36,11 +47,17 @@
                 <div class="sideBySidePanels">
                     <img src="images/faceSketch.png" class="faceCover panel ">
                     <div class="panel">
-                        <h2 class="bigText">About Me</h2>
-                        <p class="smallText">Hi, I'm Matt Hagger and I make <span class="smallText" id="thingsTxt">things</span></p>
+                        <h2 class="leftText bigText">About Me</h2>
+                        <p class="smallText">Hi, I'm Matt Hagger and I build <br><b class="smallText">- </b><b class="smallText" id="thingsTxt">things</b></p>
+                        <br>
+                        <p class="verySmallText smallText">
+                            Student, &nbsp front end designer, &nbsp indie developer... &nbsp whatever you want to call me, I'm just a guy who loves to make things.
+                            <br><br><br>
+                            Scroll down and I'll show you some of my projects.
+                            <br><br><br>
+                        </p>
                     </div>
                 </div>
-                <!-- <a href="#skills"><img src="images/arrow.png" class="arrowImg"></a> -->
             </div>
             <div id="skills" class="sectCont scrollArea">
                 <h2 class="bigText">Skills</h2>
@@ -116,78 +133,82 @@
             </div>
             <div id="projects" class="sectCont scrollArea">
                 <h2 class="bigText">Projects</h2>
-                <div class="noWrap sideBySidePanels">
-                    <div class="panel">
+                <div class="projectsPanels">
+                    <div class="projPanel">
                         <img src="images/SyoodaExample.png" class="displayImg">
                         <h3 class="subtitle">Syooda</h3>
                         <a href="https://syooda.matthagger.me/" class="link" target="_blank">Visit Site</a>
-                        <p class="verySmallText smallText">descriptions</p>
+                        <hr class="smallDiv">
+                        <p class="verySmallText smallText">A desktop app I made for keeping track of schoolwork and automatically connecting to meetings for students during Covid virtual learning.</p>
                     </div>
-                    <div class="panel">
+                    <div class="projPanel">
                         <img src="https://projectnodenium.com/Profiles/Content/Server_8.png" class="displayImg">
                         <h3 class="subtitle">Project Nodenium</h3>
                         <a href="https://projectnodenium.com/" class="link" target="_blank">Visit Site</a>
-                        <p class="verySmallText smallText">descriptions</p>
+                        <hr class="smallDiv">
+                        <p class="verySmallText smallText">Nodenium is a renowned Minecraft creative community I built from the ground up. I now focus on managing the global community and developing the software and website to run everything.</p>
                     </div>
-                    <div class="panel">
+                    <div class="projPanel">
                         <img src="https://img.itch.zone/aW1nLzUyMjk1MDQucG5n/315x250%23c/Lbc%2FuR.png" class="displayImg">
                         <h3 class="subtitle">Flagship</h3>
                         <a href="https://matthagger.itch.io/flagship" class="link" target="_blank">Visit Site</a>
-                        <p class="verySmallText smallText">descriptions</p>
+                        <hr class="smallDiv">
+                        <p class="verySmallText smallText">For the Brackeys Game Jam I submitted Flagship, a 3d naval game where you can build a fleet of ships and sail the seas. Being developed alone, start to finish in only 168 consecutive sleepless hours, this is the most difficult project I have ever done.</p>
                     </div>
                 </div>
             </div>
             <div id="projects2" class="sectCont scrollArea">
                 <div class="topToBottomPanels">
+                    <h3 class="subtitle">Other Projects</h3>
                     <div class="itemList">
                         <div class="listItem">
-                            <img class="icon" src="images/sideArrow.png">
+                            <span class="material-symbols-outlined">remove</span>
                             <a href="https://matthagger.itch.io/logic-gates" class="link" target="_blank">Logic Gates</a>
                         </div>
                         <div class="listItem">
-                            <img class="icon" src="images/sideArrow.png">
+                            <span class="material-symbols-outlined">remove</span>
                             <a href="https://matthagger.itch.io/core-control" class="link" target="_blank">Core Control</a>
                         </div>
                         <div class="listItem">
-                            <img class="icon" src="images/sideArrow.png">
+                            <span class="material-symbols-outlined">remove</span>
                             <a href="https://matthagger.itch.io/untitled-ball-game" class="link" target="_blank">untitled ball game</a>
                         </div>
                         <div class="listItem">
-                            <img class="icon" src="images/sideArrow.png">
+                            <span class="material-symbols-outlined">remove</span>
                             <a href="https://matthagger.itch.io/fief-lord" class="link" target="_blank">Fief Lord</a>
                         </div>
                     </div>
                     <div class="itemList">
                         <div class="listItem">
-                            <img class="icon" src="images/sideArrow.png">
+                            <span class="material-symbols-outlined">remove</span>
                             <a href="http://voronoi.camocreeper.repl.co/" class="link" target="_blank">Voronoi JS</a>
                         </div>                        <div class="listItem">
-                            <img class="icon" src="images/sideArrow.png">
+                            <span class="material-symbols-outlined">remove</span>
                             <a href="https://replit.com/@camocreeper/AsciiSphere#main.cs" class="link" target="_blank">Ascii Sphere</a>
                         </div>
                         <div class="listItem">
-                            <img class="icon" src="images/sideArrow.png">
+                            <span class="material-symbols-outlined">remove</span>
                             <a href="https://weather.matthagger.me/" class="link" target="_blank">Weather App</a>
                         </div>
                         <div class="listItem">
-                            <img class="icon" src="images/sideArrow.png">
+                            <span class="material-symbols-outlined">remove</span>
                             <a href="https://github.com/Camo651/Arbolite-Game" class="link" target="_blank">Arbolite</a>
                         </div>
                     </div>
                     <div class="itemList">
                         <div class="listItem">
-                            <img class="icon" src="images/sideArrow.png">
+                            <span class="material-symbols-outlined">remove</span>
                             <a href="https://matthagger.itch.io/fluster-cluck" class="link" target="_blank">Fluster Cluck</a>
                         </div>                        <div class="listItem">
-                            <img class="icon" src="images/sideArrow.png">
+                            <span class="material-symbols-outlined">remove</span>
                             <a href="https://matthagger.itch.io/tiacol" class="link" target="_blank">Tiacol</a>
                         </div>
                         <div class="listItem">
-                            <img class="icon" src="images/sideArrow.png">
+                            <span class="material-symbols-outlined">remove</span>
                             <a href="https://matthagger.itch.io/remade" class="link" target="_blank">Remade</a>
                         </div>
                         <div class="listItem">
-                            <img class="icon" src="images/sideArrow.png">
+                            <span class="material-symbols-outlined">remove</span>
                             <a href="https://matthagger.itch.io/desiccated" class="link" target="_blank">Desiccated</a>
                         </div>
                     </div>
@@ -240,158 +261,5 @@
             </div>
         </div>
     </body>
-    <style>
-
-        .devicon{
-            font-size: 4rem;
-            color: var(--textColor);
-            transition: all 0.2s ease-in-out;
-        }
-        .displayImg{
-            width: 25vw;
-            height: 100%;
-            object-fit: scale-down;
-        }
-        .faceCover{
-            height: 80vh !important;
-            object-fit:scale-down;
-            z-index: 3;
-        }
-        
-        .itemList{
-            position: relative;
-            display: flex;
-            flex-direction: row;
-            justify-content: center;
-            align-items: center;
-        }
-        .listItem{
-            position: relative;
-            display: flex;
-            flex-direction: column;
-            justify-content: flex-start;
-            align-items: center;
-            margin: 20px;
-            width: 14vw;
-        }
-        .icon{
-            width: 50px;
-            height: 50px;
-            margin: 10px;
-        }
-        .panel{
-            position: relative;
-            height: 100%;
-            width: 50vw;
-            display: flex;
-            flex-direction: column;
-            justify-content: flex-start;
-            align-items: flex-start;
-            overflow:hidden;
-            object-fit: contain;
-            align-items: center;
-        }
-        .sideBySidePanels{
-            position: relative;
-            width: 100vw;
-            display: flex;
-            flex-direction: row;
-            justify-content: center;
-            align-items: center;
-            flex-wrap: wrap;
-        }
-        .topToBottomPanels{
-            position: relative;
-            width: 100vw;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            flex-wrap: wrap;
-        }
-        .listItem .smallText{
-            text-align: center;
-            padding-top: 5px;
-            transition: all 0.2s ease-in-out;
-
-        }
-
-        .listItem:hover .smallText, .listItem:hover .devicon{
-            color: var(--accent);
-            scale: 1.1;
-            transition: all 0.2s ease-in-out;
-        }
-        
-        .verySmallText{
-            font-size: 1.2rem;
-            color: var(--textColor);
-            transition: all 0.2s ease-in-out;
-
-        }
-        
-    </style>
-    <script>
-            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function (e) {
-            e.preventDefault();
-
-            document.querySelector(this.getAttribute('href')).scrollIntoView({
-                behavior: 'smooth'
-            });
-        });
-    });
-
-    let colourMode = 0;
-    function toggleColourMode(){
-        if(colourMode == 0){
-            document.documentElement.style.setProperty('--background', '#0d0e0e');
-            document.documentElement.style.setProperty('--textColour', '#ffffff');
-
-            colourMode = 1;
-        }else{
-            document.documentElement.style.setProperty('--background', '#edf1f1');
-            document.documentElement.style.setProperty('--textColour', '#000000');
-            colourMode = 0;
-        }
-    }
-
-    animateText(0);
-    async function animateText(cycle){
-        let id="thingsTxt";
-        let elm = document.getElementById(id);
-        let tape = ["Websites", "Games", "Apps", "Tools", "Mods", "Things", "Simulations"];
-        let chars = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*()_+-=[]{};':,./<>?`~";
-        let oldTxt = elm.innerHTML;
-        if(cycle >= tape.length){
-            cycle = 0;
-        }
-        newTxt = tape[cycle];
-        maxLen = Math.max(oldTxt.length, newTxt.length);
-        //slowly change each character in the innerHTML to a random character
-        for(let i = 0; i < maxLen; i++){
-            await new Promise(resolve => setTimeout(resolve, 40));
-            elm.innerHTML = editChar(elm.innerHTML, i, chars[Math.floor(Math.random() * chars.length)]);
-        }
-        let currTxt = elm.innerHTML;
-        //slowly change each character in the innerHTML to the correct character
-        maxLen = Math.max(currTxt.length, newTxt.length);
-        for(let i = 0; i < maxLen; i++){
-            await new Promise(resolve => setTimeout(resolve, 40));
-            let newChar = newTxt.length > i ? newTxt[i] : " ";
-            elm.innerHTML = editChar(elm.innerHTML, i, newTxt[i]);
-        }
-        elm.innerHTML = newTxt;
-        //call this function again after a delay
-        setTimeout(function(){
-            animateText(cycle+1);
-        },3500);
-    }
-
-    function editChar(str, index, chr) {
-        if(chr == undefined || chr == null) chr = " ";
-        if(index > str.length-1) return str + chr;
-        return str.substr(0,index) + chr + str.substr(index+1);
-    }
-
-    </script>
+    <script src="script.js"></script>
 </html>

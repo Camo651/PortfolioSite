@@ -30,3 +30,14 @@
         transform: translateX(0);
     }
 }
+@keyframes blurCycle{
+    0%{
+        filter: blur(0px);
+    }
+    50%{
+        filter: blur(8px);
+    }
+    100%{
+        filter: blur(0px);
+    }
+}
